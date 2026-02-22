@@ -1,0 +1,54 @@
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero p {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.hero button {
+  padding: 12px 25px;
+  font-size: 18px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  background: #f5f5f5;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* APP SECTION */
+.app {
+  padding: 40px;
+  text-align: center;
+}

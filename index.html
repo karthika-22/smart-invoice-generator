@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Invoice Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <h1>Smart Invoice Generator</h1>
+  <p>Create beautiful invoices instantly — no login required</p>
+  <button onclick="scrollToApp()">🚀 Create Invoice</button>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="card">⚡ Instant Invoice</div>
+  <div class="card">📄 Download PDF</div>
+  <div class="card">🖨️ Print Ready</div>
+</section>
+
+<!-- APP -->
+<section id="app" class="app">
+  <h2>Generate Your Invoice</h2>
+
+  <input type="text" id="clientName" placeholder="Client Name" />
+  <input type="text" id="itemName" placeholder="Item Name" />
+  <input type="number" id="amount" placeholder="Amount ₹" />
+
+  <button onclick="addItem()">Add Item</button>
+  <button onclick="generateInvoice()">Generate Invoice</button>
+
+  <div id="invoice" class="invoice" style="display:none;">
+    <h2>Invoice</h2>
+    <p><strong>Client:</strong> <span id="displayClient"></span></p>
+
+    <table>
+      <thead>
+        <tr><th>Item</th><th>Amount</th></tr>
+      </thead>
+      <tbody id="itemsTable"></tbody>
+    </table>
+
+    <h3>Total: ₹<span id="totalAmount">0</span></h3>
+
+    <button onclick="printInvoice()">Print</button>
+    <button onclick="downloadPDF()">Download PDF</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
